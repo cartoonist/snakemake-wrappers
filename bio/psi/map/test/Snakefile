@@ -1,0 +1,12 @@
+rule map:
+    input:
+        graph="x.vg",
+        reads="x.fq"
+    output:
+        align="alignments/out.gam",
+    params:
+        "-l 30 -e 100"
+    log:
+        "logs/psi/map/x.log"
+    wrapper:
+        "master/bio/psi/map"

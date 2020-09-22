@@ -3488,3 +3488,11 @@ def test_diamond_blastx():
         "bio/diamond/blastx",
         ["snakemake", "--cores", "1", "foo.tsv.gz", "--use-conda", "-F"],
     )
+
+
+@skip_if_not_modified
+def test_psi_map():
+    run(
+        "bio/psi/map",
+        ["snakemake", "--cores", "1", "alignments/out.gam", "--use-conda", "-F"],
+    )
