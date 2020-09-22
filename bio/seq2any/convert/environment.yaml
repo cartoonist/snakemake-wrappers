@@ -1,0 +1,5 @@
+channels:
+  - bioconda
+  - defaults
+dependencies:
+  - seq2any ==0.0.1

@@ -3504,3 +3504,11 @@ def test_psi_ggsim():
         "bio/psi/ggsim",
         ["snakemake", "--cores", "1", "reads/x.fq", "--use-conda", "-F"],
     )
+
+
+@skip_if_not_modified
+def test_seq2any_convert():
+    run(
+        "bio/seq2any/convert",
+        ["snakemake", "--cores", "1", "reads/x.fq", "--use-conda", "-F"],
+    )

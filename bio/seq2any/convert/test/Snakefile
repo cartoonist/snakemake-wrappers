@@ -1,0 +1,11 @@
+rule sim:
+    input:
+        seq="x.seq"
+    output:
+        seq="reads/x.fq"
+    params:
+        "--format fastq -p \"read-\" --qual 40"
+    log:
+        "logs/seq2any/convert/x.log"
+    wrapper:
+        "master/bio/seq2any/convert"

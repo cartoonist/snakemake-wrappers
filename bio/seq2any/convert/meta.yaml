@@ -1,0 +1,4 @@
+name: "seq2any convert"
+description: Convert a sequence file to any format supported by BioPython.
+authors:
+  - Ali Ghaffaari
