@@ -1,0 +1,4 @@
+name: "psi ggsim"
+description: Simulate reads or haplotypes from a variation graph.
+authors:
+  - Ali Ghaffaari

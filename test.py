@@ -3496,3 +3496,11 @@ def test_psi_map():
         "bio/psi/map",
         ["snakemake", "--cores", "1", "alignments/out.gam", "--use-conda", "-F"],
     )
+
+
+@skip_if_not_modified
+def test_psi_ggsim():
+    run(
+        "bio/psi/ggsim",
+        ["snakemake", "--cores", "1", "reads/x.fq", "--use-conda", "-F"],
+    )

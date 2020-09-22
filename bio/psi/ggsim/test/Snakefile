@@ -1,0 +1,11 @@
+rule sim:
+    input:
+        vg="x.vg"
+    output:
+        reads="reads/x.fq"
+    params:
+        "-l 100 -n 100 -f"
+    log:
+        "logs/psi/sim/x.log"
+    wrapper:
+        "master/bio/psi/ggsim"
