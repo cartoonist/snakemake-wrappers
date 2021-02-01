@@ -1,0 +1,9 @@
+rule sort:
+    input:
+        vg="c.vg"
+    output:
+        sorted="graph/c.sorted.vg"
+    log:
+        "logs/vg/sort/c.log"
+    wrapper:
+        "master/bio/vg/sort"

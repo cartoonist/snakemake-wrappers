@@ -1,0 +1,4 @@
+name: "vg sort"
+description: Sort variant graph by various algorithms.
+authors:
+  - Ali Ghaffaari

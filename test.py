@@ -3427,6 +3427,14 @@ def test_vg_sim():
 
 
 @skip_if_not_modified
+def test_vg_sort():
+    run(
+        "bio/vg/sort",
+        ["snakemake", "--cores", "1", "graph/c.sorted.vg", "--use-conda", "-F"],
+    )
+
+
+@skip_if_not_modified
 def test_wgsim():
     run(
         "bio/wgsim",
