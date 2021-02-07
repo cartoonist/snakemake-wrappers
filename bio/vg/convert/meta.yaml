@@ -1,0 +1,4 @@
+name: "vg convert"
+description: Convert graphs between handle-graph compliant formats.
+authors:
+  - Ali Ghaffaari

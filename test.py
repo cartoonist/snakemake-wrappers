@@ -3435,6 +3435,14 @@ def test_vg_sort():
 
 
 @skip_if_not_modified
+def test_vg_convert():
+    run(
+        "bio/vg/convert",
+        ["snakemake", "--cores", "1", "graph/x.hg.vg", "--use-conda", "-F"],
+    )
+
+
+@skip_if_not_modified
 def test_wgsim():
     run(
         "bio/wgsim",

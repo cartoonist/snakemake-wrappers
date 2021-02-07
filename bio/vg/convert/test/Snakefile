@@ -1,0 +1,13 @@
+rule convert:
+    input:
+        vg="x.vg"
+    output:
+        vg="graph/x.hg.vg"
+    params:
+        "--hash-out"
+    log:
+        "logs/vg/convert/x.log"
+    threads:
+        4
+    wrapper:
+        "master/bio/vg/convert"
