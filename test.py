@@ -3443,6 +3443,14 @@ def test_vg_convert():
 
 
 @skip_if_not_modified
+def test_vg_augment():
+    run(
+        "bio/vg/augment",
+        ["snakemake", "--cores", "1", "graph/c_aug.vg", "--use-conda", "-F"],
+    )
+
+
+@skip_if_not_modified
 def test_wgsim():
     run(
         "bio/wgsim",

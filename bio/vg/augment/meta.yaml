@@ -1,0 +1,4 @@
+name: "vg augment"
+description: Embed GAM alignments into a graph to facilitate variant calling.
+authors:
+  - Ali Ghaffaari

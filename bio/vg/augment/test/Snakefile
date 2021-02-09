@@ -1,0 +1,14 @@
+rule augment:
+    input:
+        vg="c.vg",
+        gam="haplotypes.gam"
+    output:
+        vg="graph/c_aug.vg"
+    params:
+        "--include-paths"
+    log:
+        "logs/vg/augment/c.log"
+    threads:
+        4
+    wrapper:
+        "master/bio/vg/augment"
