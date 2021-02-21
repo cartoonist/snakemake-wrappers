@@ -3451,6 +3451,14 @@ def test_vg_augment():
 
 
 @skip_if_not_modified
+def test_vg_view():
+    run(
+        "bio/vg/view",
+        ["snakemake", "--cores", "1", "graph/c.gfa", "--use-conda", "-F"],
+    )
+
+
+@skip_if_not_modified
 def test_wgsim():
     run(
         "bio/wgsim",

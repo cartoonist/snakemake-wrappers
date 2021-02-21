@@ -1,0 +1,13 @@
+rule view:
+    input:
+        ins="c.vg"
+    output:
+        out="graph/c.gfa"
+    params:
+        "-g"
+    log:
+        "logs/vg/view/c.log"
+    threads:
+        4
+    wrapper:
+        "master/bio/vg/view"
