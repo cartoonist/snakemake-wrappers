@@ -1,0 +1,15 @@
+rule map:
+    input:
+        graph="x.xg",
+        reads=["1.fq", "2.fq"]
+    output:
+        align="alignments/out.gam",
+    params:
+        lambda wildcards, input: ("-m short -g x.gcsa "
+                                  f"{' '.join(['-f '+r for r in input.reads])}")
+    log:
+        "logs/vg/map/x.log"
+    threads:
+        4
+    wrapper:
+        "master/bio/vg/map"
