@@ -3467,6 +3467,14 @@ def test_vg_map():
 
 
 @skip_if_not_modified
+def test_graphaligner_map():
+    run(
+        "bio/GraphAligner/map",
+        ["snakemake", "--cores", "1", "alignments/out.gam", "--use-conda", "-F"],
+    )
+
+
+@skip_if_not_modified
 def test_wgsim():
     run(
         "bio/wgsim",

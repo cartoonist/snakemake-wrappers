@@ -1,0 +1,12 @@
+rule map:
+    input:
+        graph="x.gfa",
+        reads="x.fq"
+    output:
+        align="alignments/out.gam",
+    params:
+        "--seeds-minimizer-length 15 --seeds-minimizer-windowsize 20 --seeds-minimizer-density 10 --seeds-minimizer-ignore-frequent 0.001 -b 5"
+    log:
+        "logs/GraphAligner/map/x.log"
+    wrapper:
+        "master/bio/GraphAligner/map"
